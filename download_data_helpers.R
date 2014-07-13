@@ -13,6 +13,6 @@ downloadFile <- function() {
 }
 
 subsetData <- function() {
-  data <- read.table("household_power_consumption.txt", header = TRUE, sep=";", na.strings = "?")
+  data <- read.table("household_power_consumption.txt", header = TRUE, sep=";", na.strings = "?", stringsAsFactors = FALSE)
   subset(data, data$Date == "2/2/2007" | data$Date == "1/2/2007")
 }
